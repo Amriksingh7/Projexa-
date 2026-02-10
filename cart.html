@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart - HomeKitchen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🍲 HomeKitchen</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#">Orders</a>
+        <a href="#">Profile</a>
+    </nav>
+</header>
+
+<button onclick="toggleFullCart()" class="expand-btn">
+    Expand / Collapse Cart View
+</button>
+
+
+<section class="checkout-container">
+    <h2>Your Cart</h2>
+
+    <div id="cartDetails"></div>
+
+    <div class="bill">
+        <div class="row">
+            <span>Subtotal</span>
+            <span id="subtotal">₹0</span>
+        </div>
+        <div class="row">
+            <span>GST (18%)</span>
+            <span id="gst">₹0</span>
+        </div>
+        <div class="row">
+            <span>Delivery</span>
+            <span id="delivery">₹40</span>
+        </div>
+        <div class="row">
+            <span>Discount</span>
+            <span id="discount">- ₹0</span>
+        </div>
+        <hr>
+        <div class="row total">
+            <span>Total Payable</span>
+            <span id="finalTotal">₹0</span>
+        </div>
+    </div>
+
+    <div class="coupon">
+        <input type="text" id="couponCode" placeholder="Enter coupon code">
+        <button onclick="applyCoupon()">Apply</button>
+    </div>
+
+    <div class="payment">
+        <h3>Select Payment Method</h3>
+        <label><input type="radio" name="payment" value="UPI"> UPI</label><br>
+        <label><input type="radio" name="payment" value="Card"> Credit/Debit Card</label><br>
+        <label><input type="radio" name="payment" value="COD"> Cash on Delivery</label>
+    </div>
+
+    <button class="place-order" onclick="placeOrder()">Place Order</button>
+
+</section>
+
+
+
+<script src="script.js"></script>
+<script>
+displayCheckout();
+</script>
+
+</body>
+</html>

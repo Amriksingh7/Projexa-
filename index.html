@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeKitchen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    
+    <div class="logo">🍲 HomeKitchen</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Subscriptions</a>
+        <a href="#">Orders</a>
+        
+        <a href="#">Profile</a>
+        <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cartCount">0</span>
+    </div>
+        
+    </div>
+    
+    
+    
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Miss Home Food?</h1>
+    <p>Discover authentic homemade meals near you</p>
+    <button onclick="scrollToMenu()">Explore Food</button>
+</section>
+
+<section class="controls">
+    <input type="text" id="search" placeholder="Search dishes..." onkeyup="filterFood()">
+
+    <div class="filters">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Veg')">Veg</button>
+        <button onclick="filterCategory('Non-Veg')">Non-Veg</button>
+        <button onclick="filterCategory('Low Spice')">Low Spice</button>
+    </div>
+</section>
+
+<section class="menu" id="menu">
+    <h2>Today's Special</h2>
+    <div class="card-grid" id="foodContainer"></div>
+</section>
+
+<div class="cart">
+    <h3>🛒 Cart</h3>
+    <div id="cartItems"></div>
+    <div class="total" id="total">Total: ₹0</div>
+</div>
+
+
+<div class="side-cart" id="sideCart">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span onclick="toggleCart()">✖</span>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-footer">
+        <div class="subtotal">
+            Subtotal: ₹<span id="cartTotal">0</span>
+        </div>
+        <button onclick="goToCheckout()">Checkout</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

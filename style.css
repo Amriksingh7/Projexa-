@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #F8F8F8;
+}
+
+header {
+    background: #E23744;
+    padding: 15px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #E23744, #ff6b6b);
+    color: white;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #E23744;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.controls {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.controls input {
+    padding: 10px;
+    width: 40%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.filters button {
+    margin: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #E23744;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.price {
+    color: #E23744;
+    font-weight: bold;
+}
+
+.card button {
+    padding: 8px 15px;
+    border: none;
+    background: #E23744;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #1C1C1C;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    width: 250px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.total {
+    margin-top: 10px;
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.checkout-container {
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+#cartDetails {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.bill {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.total {
+    font-weight: bold;
+    color: #E23744;
+}
+
+.coupon {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.coupon input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #ccc;
+}
+
+.coupon button {
+    padding: 8px 15px;
+    border: none;
+    background: #E23744;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+.payment {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.place-order {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #E23744;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Cart Icon */
+.cart-icon {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
+
+#cartCount {
+    background: white;
+    color: #E23744;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Side Cart */
+.side-cart {
+    position: fixed;
+    right: -350px;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.side-cart.active {
+    right: 0;
+}
+
+.cart-header {
+    background: #E23744;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header span {
+    cursor: pointer;
+}
+
+#cartItems {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-controls button {
+    padding: 3px 8px;
+    margin: 0 3px;
+    border: none;
+    background: #E23744;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-footer {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.cart-footer button {
+    width: 100%;
+    padding: 10px;
+    background: #E23744;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.expand-btn {
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    background: #1C1C1C;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkout-container.full-preview {
+    max-width: 95%;
+    transition: 0.3s;
+}
